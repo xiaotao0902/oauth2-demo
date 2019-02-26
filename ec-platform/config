@@ -1,0 +1,4 @@
+postgresql_url=jdbc:postgresql://ecplatform.cwf6ycimnzmo.ap-northeast-1.rds.amazonaws.com:5432/ecplatform
+redis_url=localhost
+token_url=http://localhost:5000/oauth/token
+check_token_url=http://localhost:5000/oauth/check_token

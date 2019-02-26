@@ -1,0 +1,25 @@
+security:
+    basic:
+        enabled: false
+        
+server:
+  port: 8088
+  
+spring:
+  application:
+    name: product-service
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: ${postgresql_url}
+    username: ecplateform
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    
+oauth: 
+  token: ${token_url}
+  check_token: ${check_token_url}

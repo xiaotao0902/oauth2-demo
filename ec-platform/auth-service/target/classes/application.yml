@@ -1,0 +1,36 @@
+server:
+  port: 5000
+
+spring:
+  application:
+    name: auth-service
+  redis:
+      database: 5
+      host: ${redis_url}
+      port: 6379
+      pool:
+          max-active: 30
+          max-wait: 10
+          min-idle: 10
+          max-idle: 20
+          
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: ${postgresql_url}
+    username: ecplateform
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+ 
+
+logging:
+  level:
+     org:
+       springframework:
+         security:
+          web:
+            FilterChainProxy: ERROR
