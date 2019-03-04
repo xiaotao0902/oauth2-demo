@@ -33,10 +33,10 @@ public class DataStoreConfig {
     /**
      * 
      * Token
-     * 1、InMemoryTokenStore
-     * 2、JdbcTokenStore
-     * 3、JwtTokenStore
-     * 4、RedisTokenStore
+     * 1InMemoryTokenStore
+     * 2JdbcTokenStore
+     * 3JwtTokenStore
+     * 4RedisTokenStore
      */
     @Bean
     public TokenStore tokenStore(RedisConnectionFactory redisConnectionFactory) {

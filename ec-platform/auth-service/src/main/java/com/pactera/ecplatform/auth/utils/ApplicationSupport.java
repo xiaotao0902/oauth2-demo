@@ -13,12 +13,10 @@ import org.springframework.stereotype.Component;
 public class ApplicationSupport implements DisposableBean, ApplicationContextAware {
 
     private static ApplicationContext applicationContext;
-    // 获取配置文件参数值
     public static String getParamVal(String paramKey){
         return applicationContext.getEnvironment().getProperty(paramKey);
     }
 
-    // 获取bean对象
     public static Object getBean(String name) {
         return applicationContext.getBean(name);
     }

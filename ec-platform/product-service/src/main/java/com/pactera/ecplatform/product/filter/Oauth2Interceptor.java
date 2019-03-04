@@ -18,9 +18,9 @@ public class Oauth2Interceptor extends HandlerInterceptorAdapter {
 		response.setHeader("Access-Control-Allow-Methods", "*");
 		response.setHeader("Access-Control-Allow-Headers", "access_token, Authorization, content-type, X-Requested-With, XMLHttpRequest");
 		response.setHeader("Access-Control-Allow-Credentials", "true");
-		
+		Oauth2Utils config = new Oauth2Utils();
 		String accessToken = request.getParameter("access_token");
-		OAuth2AccessToken oauth2AccessToken = Oauth2Utils.checkTokenInOauth2Client(accessToken);
+		OAuth2AccessToken oauth2AccessToken = config.checkTokenInOauth2Client(accessToken);
 		if (oauth2AccessToken == null) {// 非法的Token值
 			response.setStatus(HttpStatus.UNAUTHORIZED.value());
 			ResponseUtils.responseData(response, "unauthorized token");
