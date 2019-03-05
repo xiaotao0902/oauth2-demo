@@ -6,7 +6,7 @@ spring:
     name: auth-service
   redis:
       database: 5
-      host: localhost
+      host: cluster-redis-eks.zwt0jk.0001.apne1.cache.amazonaws.com
       port: 6379
       pool:
           max-active: 30
@@ -16,7 +16,7 @@ spring:
           
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://ecplatform.cwf6ycimnzmo.ap-northeast-1.rds.amazonaws.com:5432/ecplatform
+    url: jdbc:postgresql://pg-eks.cwf6ycimnzmo.ap-northeast-1.rds.amazonaws.com:5432/ecplatform
     username: ecplateform
     password: password
   jpa:

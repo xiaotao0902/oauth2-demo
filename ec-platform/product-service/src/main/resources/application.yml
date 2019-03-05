@@ -10,7 +10,7 @@ spring:
     name: product-service
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://ecplatform.cwf6ycimnzmo.ap-northeast-1.rds.amazonaws.com:5432/ecplatform
+    url: jdbc:postgresql://pg-eks.cwf6ycimnzmo.ap-northeast-1.rds.amazonaws.com:5432/ecplatform
     username: ecplateform
     password: password
   jpa:
