@@ -1,0 +1,45 @@
+server:
+  port: 5000
+
+spring:
+  application:
+    name: auth-service
+  redis:
+      database: 5
+      host: cluster-redis-eks.zwt0jk.0001.apne1.cache.amazonaws.com
+      port: 6379
+      pool:
+          max-active: 30
+          max-wait: 10
+          min-idle: 10
+          max-idle: 20
+          
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://pg-eks.cwf6ycimnzmo.ap-northeast-1.rds.amazonaws.com:5432/ecplatform
+    username: ecplateform
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+ 
+#security:
+#  oauth2:
+#    resource:
+#      filter-order: 3
+#logging:
+#  level:
+#     org:
+#       springframework:
+#         security: DEBUG
+
+logging:
+  level:
+     org:
+       springframework:
+         security:
+          web:
+            FilterChainProxy: ERROR

@@ -1,0 +1,21 @@
+security:
+    basic:
+        enabled: false
+        
+server:
+  port: 8088
+  
+spring:
+  application:
+    name: product-service
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://pg-eks.cwf6ycimnzmo.ap-northeast-1.rds.amazonaws.com:5432/ecplatform
+    username: ecplateform
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
